@@ -1,0 +1,299 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f5f5f5;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #fff;
+  color: #000;
+  padding: 30px;
+  height: 100%;
+  position: fixed;
+}
+
+.sidebar h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin: 10px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #a0a0a0;
+  display: block;
+  padding: 15px 20px 10px 0px;
+}
+
+.content {
+  margin-left: 250px;
+  padding: 20px;
+}
+
+.logo {
+  width: 180px;
+  height: 80px;
+}
+
+.menu-group {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+.menu-icon {
+  margin-right: 18px;
+}
+
+.card-container {
+  margin-top: 135px;
+  margin-bottom: 12px;
+}
+
+.sidebar-footer {
+  padding: 10px;
+  position: absolute;
+  bottom: 10px;
+}
+
+.active-menu i {
+  background-color: #ff730e;
+  color: #fff;
+  padding: 6px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: normal;
+  display: inline-block;
+}
+
+.active-menu a {
+  background-color: #fff;
+  color: #ff730e;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.user-role-label {
+  margin-top: 10px;
+  background-color: #fff1e6;
+  color: #ff730e;
+  padding: 8px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+hr {
+  border: 1px solid #e8e7e7;
+}
+
+.stats-card-md {
+  background-color: #fff;
+  padding: 24px;
+  border-radius: 8px;
+  width: 600px;
+  height: 380px;
+  margin-top: 24px;
+}
+
+.stats-card-lg {
+  background-color: #fff;
+  padding: 24px;
+  border-radius: 8px;
+  width: 80vw;
+  height: 480px;
+  margin-top: 24px;
+  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+.stats-card {
+  background-color: #fff;
+  padding: 24px;
+  border-radius: 8px;
+  width: 290px;
+}
+
+.stats-card-label {
+  font-size: 18px;
+  font-weight: bold;
+  color: #3b3551;
+}
+
+.stats-card-side-label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #6f7f95;
+}
+
+.stats-card-value {
+  font-size: 22px;
+  font-weight: 500;
+  color: #3b3551;
+}
+
+.stats-card-numbers {
+  font-size: 38px;
+  font-weight: 600;
+  color: #3b3551;
+}
+
+.stats-card-summary {
+  font-size: 16px;
+  font-weight: normal;
+  color: #a5afbd;
+}
+
+.caret-green {
+  margin-left: 8px;
+  color: #008000;
+  font-size: 20px;
+}
+
+.caret-red {
+  margin-left: 8px;
+  color: #ff0000;
+  font-size: 20px;
+}
+
+.d-flex {
+  display: flex;
+  align-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.d-flex-without-wrap {
+  display: flex;
+  align-content: space-between;
+  gap: 20px;
+}
+
+.d-flow-root {
+  display: flow-root;
+}
+
+.float-l {
+  float: left;
+}
+
+.float-r {
+  float: right;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px auto;
+}
+
+th,
+td {
+  border-bottom: 1px solid #ddd;
+  padding: 14px;
+  text-align: left;
+}
+
+th {
+  background-color: #fff;
+  padding: 14px;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+  background-color: #ddd;
+}
+
+.primary-label {
+  color: #ff730e;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.secondary-label {
+  color: #3b3551;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.green-label {
+  color: #008000;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: #000;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.pagination a.active {
+  background-color: #ff730e;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
+  border-radius: 5px;
+}
+
+.status-label {
+  background-color: #fff1e6;
+  color: #ff730e;
+  padding: 8px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.notification {
+  font-size: 22px;
+  color: #a0a0a0;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+
+.mt-4 {
+  margin-top: 4rem;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.ml-1 {
+  margin-left: 1rem;
+}
+
+.ml-2 {
+  margin-left: 2rem;
+}

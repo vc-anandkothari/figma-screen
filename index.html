@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calopad Figma Practice</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Style.css -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Chart JS Scripts-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Script -->
+    <script defer src='main.js'></script>
+</head>
+
+<body>
+    <div class="sidebar">
+        <!-- Logo -->
+        <img src='./logo.png' class='logo' />
+
+        <!-- Sidebar -->
+        <div class='mt-2'>
+            <!-- Navigation Menus -->
+            <div>
+                <ul>
+                    <li><a href="#"><i class="fa fa-th-large menu-icon" aria-hidden="true"></i>Dashboard</a></li>
+                    <hr>
+                    <label class='menu-group'>Partners</label><i class="fa fa-caret-down menu-icon"
+                        aria-hidden="true"></i>
+                    <li class='active-menu'><a href="#" class='active'><i class="fa fa-list menu-icon"
+                                aria-hidden="true"></i>Partners</a>
+                    </li>
+                    <hr>
+                    <label class='menu-group'>Settings</label><i class="fa fa-caret-down menu-icon"
+                        aria-hidden="true"></i>
+                    <li><a href="#"><i class="fa fa-cog menu-icon" aria-hidden="true"></i>General</a></li>
+                </ul>
+            </div>
+            <!-- Footer -->
+            <div class="sidebar-footer">
+                <div>
+                    <h3>Anand Kothari</h3>
+                    <label class='user-role-label'>ADMIN</label>
+                </div>
+
+                <div>
+                    <a href="#"><i class="fa fa-sign-out menu-icon" aria-hidden="true"></i>Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Bell -->
+    <div class='content float-r'>
+        <i class="fa fa-bell notification" aria-hidden="true"></i>
+    </div>
+
+    <div class="content">
+        <div class='card-container'>
+            <h2>Dashboard</h2>
+
+            <!-- Statistics Cards -->
+            <div class='d-flex mt-1'>
+                <div class='stats-card'>
+                    <div class='stats-card-label'>Cards Total / Activated</div>
+                    <div class='stats-card-numbers'>1'325 / 143</div>
+                    <div class='stats-card-summary'>+2% this week <i class="fa fa-caret-up caret-green"
+                            aria-hidden="true"></i></div>
+                </div>
+
+                <div class='stats-card'>
+                    <div class='stats-card-label'>Revenue Intial Cards</div>
+                    <div>
+                        <span class='stats-card-value'>CHF</span>
+                        <span class='stats-card-numbers'>13'250</span>
+                    </div>
+                    <div class='stats-card-summary'>+17% this week <i class="fa fa-caret-up caret-green"
+                            aria-hidden="true"></i></div>
+                </div>
+
+                <div class='stats-card'>
+                    <div class='stats-card-label'>Revenue Activation</div>
+                    <div>
+                        <span class='stats-card-value'>CHF</span>
+                        <span class='stats-card-numbers'>7'007</span>
+                    </div>
+
+                    <div class='stats-card-summary'>+2% this week <i class="fa fa-caret-up caret-green"
+                            aria-hidden="true"></i></div>
+                </div>
+
+                <div class='stats-card'>
+                    <div class='stats-card-label'>Billing Positions</div>
+                    <div class='stats-card-numbers'>6'945</div>
+                    <div class='stats-card-summary'>-2% this week <i class="fa fa-caret-down caret-red"
+                            aria-hidden="true"></i></div>
+                </div>
+            </div>
+
+            <!-- Statistics Graphs & Information -->
+            <div class='d-flex'>
+                <div class='stats-card-md'>
+                    <div class='d-flow-root'>
+                        <span class='stats-card-label float-l'>Overview Performance</span>
+                        <span class='stats-card-side-label float-r '>Last 6 Days<i class="fa fa-sort ml-1"
+                                aria-hidden="true"></i></span>
+                    </div>
+                    <div>
+                        <canvas id="myChart" class='mt-2'></canvas>
+                    </div>
+                </div>
+                <div class='stats-card-md'>
+
+                    <div class='d-flow-root'>
+                        <span class='stats-card-label float-l'>Top Partners</span>
+                        <span class='stats-card-side-label float-r '>This Week<i class="fa fa-sort ml-1"
+                                aria-hidden="true"></i></span>
+                    </div>
+
+                    <div class='d-flex-without-wrap mt-4'>
+                        <div>
+                            <span class='stats-card-numbers ml-2'>465</span>
+                            <div class='stats-card-summary mt-1'>+2% Activations <i class="fa fa-caret-up caret-green"
+                                    aria-hidden="true"></i></div>
+                            <div class='stats-card-label mt-4'>Omnia Physio</div>
+                        </div>
+                        <hr>
+                        <div>
+                            <span class='stats-card-numbers ml-2'>245</span>
+                            <div class='stats-card-summary mt-1'>+2% Activations <i class="fa fa-caret-up caret-green"
+                                    aria-hidden="true"></i></div>
+                            <div class='stats-card-label mt-4'>Medical Center X</div>
+
+                        </div>
+                        <hr>
+                        <div>
+                            <span class='stats-card-numbers ml-2'>154</span>
+                            <div class='stats-card-summary mt-1'>-3% Activations <i class="fa fa-caret-down caret-red"
+                                    aria-hidden="true"></i></div>
+                            <div class='stats-card-label mt-4 '>Kiosk West</div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            <!-- Tables -->
+            <div class='stats-card-lg'>
+                <div class='d-flow-root'>
+                    <span class='stats-card-label float-l'>Open Invoices</span>
+                    <span class='stats-card-side-label float-r '>Oldest Entries<i class="fa fa-sort ml-1"
+                            aria-hidden="true"></i></span>
+                </div>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Affiliate Partner</th>
+                            <th>Accounting Date</th>
+                            <th>Billable</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class='primary-label'>TCM Janine</td>
+                            <td class='secondary-label'>09.03.2023 11:21</td>
+                            <td class='green-label'>CHF 49</td>
+                            <td><select>
+                                    <option>Opened</option>
+                                    <option>Closed</option>
+                                    <option>Rejected</option>
+                                </select></td>
+                        </tr>
+                        <tr>
+                            <td class='primary-label'>Jane Smith</td>
+                            <td class='secondary-label'>09.03.2023 11:21</td>
+                            <td class='green-label'>CHF 49</td>
+                            <td><select>
+                                    <option>Opened</option>
+                                    <option>Closed</option>
+                                    <option>Rejected</option>
+                                </select></td>
+                        </tr>
+                        <tr>
+                            <td class='primary-label'>Bob Johnson</td>
+                            <td class='secondary-label'>09.03.2023 11:21</td>
+                            <td class='green-label'>CHF 49</td>
+                            <td><select>
+                                    <option>Opened</option>
+                                    <option>Closed</option>
+                                    <option>Rejected</option>
+                                </select></td>
+                        </tr>
+                        <tr>
+                            <td class='primary-label'>Bob Johnson</td>
+                            <td class='secondary-label'>09.03.2023 11:21</td>
+                            <td class='green-label'>CHF 49</td>
+                            <td><select>
+                                    <option>Opened</option>
+                                    <option>Closed</option>
+                                    <option>Rejected</option>
+                                </select></td>
+                        </tr>
+                        <tr>
+                            <td class='primary-label'>Bob Johnson</td>
+                            <td class='secondary-label'>09.03.2023 11:21</td>
+                            <td class='green-label'>CHF 49</td>
+                            <td><select>
+                                    <option>Opened</option>
+                                    <option>Closed</option>
+                                    <option>Rejected</option>
+                                </select></td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+                <div class="pagination d-block float-r">
+                    <a href="#">&laquo;</a>
+                    <a href="#">1</a>
+                    <a href="#" class="active">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                    <a href="#">6</a>
+                    <a href="#">&raquo;</a>
+                </div>
+            </div>
+
+            <div class='stats-card-lg'>
+                <div class='d-flow-root'>
+                    <span class='stats-card-label float-l'>Latest Activations</span>
+                    <span class='stats-card-side-label float-r '>Latest Entries<i class="fa fa-sort ml-1"
+                            aria-hidden="true"></i></span>
+                </div>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Affiliate Partner</th>
+                            <th>Card Type</th>
+                            <th>Card Nr.</th>
+                            <th>Date</th>
+                            <th>Shop Order Nr.</th>
+                            <th>Shop Status</th>
+                            <th>Billing Positions</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class='secondary-label'>TCM Janine</td>
+                            <td><span class='status-label'>One</span></td>
+                            <td class='secondary-label'>63kjshfkjhskdfhksf</td>
+                            <td class='secondary-label'>18.01.2023</td>
+                            <td class='secondary-label'>#1522</td>
+                            <td class='secondary-label'>Done</td>
+                            <td class='green-label'>CHF 49</td>
+                            <td class='secondary-label'><i class="fa fa-ellipsis-v ml-2" aria-hidden="true"></i></td>
+                        </tr>
+                        <tr>
+                            <td class='secondary-label'>TCM Janine</td>
+                            <td><span class='status-label'>One</span></td>
+                            <td class='secondary-label'>63kjshfkjhskdfhksf</td>
+                            <td class='secondary-label'>18.01.2023</td>
+                            <td class='secondary-label'>#1522</td>
+                            <td class='secondary-label'>Done</td>
+                            <td class='green-label'>CHF 49</td>
+                            <td class='secondary-label'><i class="fa fa-ellipsis-v ml-2" aria-hidden="true"></i></td>
+                        </tr>
+
+                        <tr>
+                            <td class='secondary-label'>TCM Janine</td>
+                            <td><span class='status-label'>One</span></td>
+                            <td class='secondary-label'>63kjshfkjhskdfhksf</td>
+                            <td class='secondary-label'>18.01.2023</td>
+                            <td class='secondary-label'>#1522</td>
+                            <td class='secondary-label'>Done</td>
+                            <td class='green-label'>CHF 49</td>
+                            <td class='secondary-label'><i class="fa fa-ellipsis-v ml-2" aria-hidden="true"></i></td>
+                        </tr>
+                        <tr>
+                            <td class='secondary-label'>TCM Janine</td>
+                            <td><span class='status-label'>One</span></td>
+                            <td class='secondary-label'>63kjshfkjhskdfhksf</td>
+                            <td class='secondary-label'>18.01.2023</td>
+                            <td class='secondary-label'>#1522</td>
+                            <td class='secondary-label'>Done</td>
+                            <td class='green-label'>CHF 49</td>
+                            <td class='secondary-label'><i class="fa fa-ellipsis-v ml-2" aria-hidden="true"></i></td>
+                        </tr>
+                        <tr>
+                            <td class='secondary-label'>TCM Janine</td>
+                            <td><span class='status-label'>One</span></td>
+                            <td class='secondary-label'>63kjshfkjhskdfhksf</td>
+                            <td class='secondary-label'>18.01.2023</td>
+                            <td class='secondary-label'>#1522</td>
+                            <td class='secondary-label'>Done</td>
+                            <td class='green-label'>CHF 49</td>
+                            <td class='secondary-label'><i class="fa fa-ellipsis-v ml-2" aria-hidden="true"></i></td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+                <div class="pagination d-block float-r">
+                    <a href="#">&laquo;</a>
+                    <a href="#">1</a>
+                    <a href="#" class="active">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                    <a href="#">6</a>
+                    <a href="#">&raquo;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+
+</html>
